@@ -8,20 +8,20 @@ const TopHeader = () => {
   return (
     <div className=" bg-white  ">
   {/*-- Top Header */}
-  <div className=" h-[36px] w-[1440px]  mx-auto flex justify-between items-center px-10 bg-slate-50">
+  <div className=" h-[36px]  w-[1440px]  mx-auto flex justify-between items-center px-10 bg-slate-50">
 
   <img src="/nike frame.png" alt="Nike Logo" className="h-[24px] w-[24px] " />
 
-    <p className="text-sm ml-56 bg-white rounded">Skip to main content</p>
+    <Link href="/" className="text-sm ml-56 bg-white rounded cursor-pointer hover:underline">Skip to main content</Link>
     
     <div className=" md:flex px-24 text-sm">
       <Link href="#" className="hover:underline">Find a Store</Link>
       <span className="mx-2">|</span>
-      <Link href="/HelpSection" className="hover:underline">Help</Link>
+      <Link href="/helpSection" className="hover:underline">Help</Link>
       <span className="mx-2">|</span>
-      <Link href="/Join" className="hover:underline">Join Us</Link>
+      <Link href="/joinForm" className="hover:underline">Join Us</Link>
       <span className="mx-2">|</span>
-      <Link href="/LoginForm" className="hover:underline"> Sign In</Link>
+      <Link href="/signinForm" className="hover:underline"> Sign In</Link>
     </div>
     
   
@@ -34,12 +34,12 @@ const TopHeader = () => {
 
     {/* Navigation Links*/}
     <nav className="flex space-x-6">
-      <Link href="" className="text-sm font-medium text-gray-700 hover:text-black">New & Featured</Link>
-      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black">Men</Link>
-      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black">Women</Link>
-      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black">Kids</Link>
-      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black">Sale</Link>
-      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black">SNKRS</Link>
+      <Link href="" className="text-sm font-medium text-gray-700 hover:text-black hover:underline">New & Featured</Link>
+      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black hover:underline">Men</Link>
+      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black hover:underline">Women</Link>
+      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black hover:underline">Kids</Link>
+      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black hover:underline">Sale</Link>
+      <Link href="#" className="text-sm font-medium text-gray-700 hover:text-black hover:underline">SNKRS</Link>
     </nav>
 
     {/*  Search & Icons*/}
@@ -59,8 +59,12 @@ const TopHeader = () => {
     </div>
 
     <div className='flex absolute pl-48'>
-    <img src="/heart.png"/>
-    <img src="/Auto Layout Horizontal.png"/>
+     
+    <img src="/heart.png" className='cursor-pointer'/>
+    <Link href="/cartPage">
+     <img src="/Auto Layout Horizontal.png" className='cursor-pointer'/>
+    </Link>
+   
 
     </div>
    

@@ -56,7 +56,7 @@ const Footer = () => {
 
   {/* Footer Bottom */}
   <div className="bg-black w-[1372px] h-[63px]  flex justify-between items-center border- border-gray-700 pt-4 ">
-    <p className="text-gray-500 ">India © 2023 Nike, Inc. All Rights Reserved</p>
+    <p className="text-gray-500 ">Pakistan © 2023 Nike, Inc. All Rights Reserved</p>
     <div className="flex space-x-4 mx-20">
       <span>Guides</span>
       <span>Terms of Sale</span>

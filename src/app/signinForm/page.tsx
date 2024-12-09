@@ -4,7 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-const LoginForm = () => {
+
+const signinForm = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
@@ -58,11 +59,11 @@ const LoginForm = () => {
           </div>
           <p className="text-sm text-center text-slate-500">
             By logging in, you agree to Nike&apos;s{' '}
-            <Link href="#" className="underline text-slate-600 hover:text-black">
+            <Link href="#" className="underline text-slate-400 hover:text-black">
               Privacy Policy <br />
             </Link>{' '}
             and{' '}
-            <Link href="#" className="underline text-slate-600 hover:text-black">
+            <Link href="#" className="underline text-slate-400 hover:text-black">
               Terms of Use
             </Link>
           </p>
@@ -75,7 +76,7 @@ const LoginForm = () => {
         </form>
         <p className="text-center text-sm">
           <span className="text-slate-500">Not a Member? </span>
-          <Link href="#" className="text-black underline hover:no-underline">
+          <Link href="/joinForm" className="text-black underline hover:underline">
             Join Us
           </Link>
         </p>
@@ -84,4 +85,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default signinForm;
