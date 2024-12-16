@@ -26,8 +26,9 @@ const BestProducts = () => {
         },
     ]
   return (
-        <div>
-            <div className='container flex flex-row   pb-12 space-x-1' >
+   /*parent best product*/
+        <div className= "container mx-auto  px-4 sm:px-6 lg:px-8">
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 pb-12'>
             {product.map((items:any)=>(
                 <ProductsChild
                 productImage={items.productImage}
@@ -38,8 +39,6 @@ const BestProducts = () => {
             ))}
             </div>
         </div>
-    
   )
 }
-
 export default BestProducts;

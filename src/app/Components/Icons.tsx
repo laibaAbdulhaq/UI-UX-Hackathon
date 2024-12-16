@@ -1,13 +1,11 @@
-
-
-import React from 'react'
+import React from 'react';
 
 const Icons = () => {
   return (
     
-         <div className="grid grid-cols-4 gap-8 pt-2 mb-8 px-20 ml-52  w-[880px] h-[192px]">
+  <div className="grid grid-cols-2  md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 pt-2 mb-72 sm:mb-8 px-10 sm:px-16 lg:px-20 w-full max-w-[880px] h-[192px] mx-auto ">
    
-    {/* Find a Store*/}
+     {/* icons*/}
     <div>
       <h3 className="font-medium mb-4">Icons</h3>
       <ul className="space-y-2">
@@ -18,7 +16,7 @@ const Icons = () => {
       </ul>
     </div>
     
-    {/* Get Help*/}
+    {/* shoes*/}
     <div>
       <h3 className="font-medium mb-4">Shoe</h3>
       <ul className="space-y-2">
@@ -29,7 +27,7 @@ const Icons = () => {
       </ul>
     </div>
     
-    {/*About Nik */}
+    {/*clothing */}
     <div>
       <h3 className="font-medium mb-4">Clothing </h3>
       <ul className="space-y-2">
@@ -39,7 +37,8 @@ const Icons = () => {
         <li>Shirts & Tops</li>
       </ul>
     </div>
-{/* */}
+
+    {/*kid's shoes*/}
     <div>
       <h3 className="font-medium mb-4">Kids</h3>
       <ul className="space-y-2">
@@ -49,11 +48,7 @@ const Icons = () => {
         <li>Kid's BasketBall Shoes</li>
       </ul>
     </div>
-  
-   
-      
-    </div>
+  </div>
   )
 }
-
 export default Icons

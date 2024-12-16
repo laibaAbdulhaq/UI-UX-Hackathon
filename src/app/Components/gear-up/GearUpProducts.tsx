@@ -1,5 +1,7 @@
 import React from 'react'
 import GearChild from './GearChild'
+import { ArrowLeft } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const GearUpProducts = () => {
     const product= [
@@ -37,22 +39,69 @@ const GearUpProducts = () => {
         },
     ]
     
-
   return (
-    <div>
-        <div className='container flex flex-row   pb-12 space-x-1' >
-            {product.map((items:any)=>(
-                <GearChild
-                productImage={items.productImage}
-                productName={items.productName}
-                productFor={items.productFor}
-                productPrice={items.productPrice}
-                />
-            ))}
+    <div className="block lg:hidden">
+    <div className="container flex flex-col space-y-12">
+      {/*for small and medium screens mobile and tablet*/}
+      {/* Shop Men's Section */}
+      <div className="space-y-">
+        <div className="flex justify-between items-center px-8 sm:px-14">
+          <h4 className="text-lg font-semibold">Shop Men's</h4>
+          <div className="flex space-x-1">
+            <div className="bg-slate-200 rounded-full p-3 cursor-pointer hover:bg-slate-300">
+              <ArrowLeft className="text-gray-500" />
             </div>
-      
-    </div>
-  )
-}
+            <div className="bg-slate-200 rounded-full p-3 cursor-pointer hover:bg-slate-300">
+              <ArrowRight className="text-gray-500" />
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:flex-row gap-6">
+          {product.slice(0, 2).map((items: any) => (
+            <GearChild
+              key={items.id}
+              productImage={items.productImage}
+              productName={items.productName}
+              productFor={items.productFor}
+              productPrice={items.productPrice}
+            />
+          ))}
+        </div>
+      </div>
 
-export default GearUpProducts
+      {/* Shop Women's Section */}
+      <div className="space-y-">
+        <div className="flex justify-between items-center px-8 sm:px-14">
+          <h4 className="text-lg font-semibold">Shop Women's</h4>
+          <div className="flex space-x-1">
+            <div className="bg-slate-200 rounded-full p-3 cursor-pointer hover:bg-slate-300">
+              <ArrowLeft className="text-gray-500" />
+            </div>
+            <div className="bg-slate-200 rounded-full p-3 cursor-pointer hover:bg-slate-300">
+              <ArrowRight className="text-gray-500" />
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {product.slice(2, 4).map((items: any) => (
+            <GearChild
+              key={items.id}
+              productImage={items.productImage}
+              productName={items.productName}
+              productFor={items.productFor}
+              productPrice={items.productPrice}
+            />
+          ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default GearUpProducts;
+
+
+
+
+
+
